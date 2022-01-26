@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    min-height: 100%;
+}
+.grid-container > * {
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: -1px 1px 7px 0px black;
+
+}
+.header{
+ grid-area: header;
+ background-color: rgb(168, 189, 206);   
+}
+.navbar{
+    grid-area: navbar;
+    background-color: rgb(202, 153, 153);
+}
+.main{
+    grid-area: main;
+    background-color: #fff;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(235, 162, 162);
+}
+.footer{
+    grid-area: footer;
+    background-color: rgb(66, 62, 62);
+}
+
+/*=======movile======*/
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+     "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer"
+    ;
+}
+/*====== Tabelt ====*/
+@media (min-width: 600px) {
+.grid-container{
+    grid-template-columns:1fr 2fr ;
+    grid-template-rows: 13em 3em 1fr 0.5fr;
+    grid-template-areas: "header header"
+    "navbar navbar"    
+    "sidebar main"
+    "footer footer"
+}
+}
+/*==========Desktop==========*/
+
+@media (min-width: 900px) {
+    .grid-container{
+        grid-template-columns:0.5fr 2fr ;
+        grid-template-rows: 12em 50px auto 3em;
+        grid-template-areas:
+         "header header "
+        "navbar navbar "    
+        "sidebar main "
+        "footer footer "
+    }
+    }
+header .encabezado{
+    display: flex;
+           flex-direction: row;
+           flex-wrap: wrap;
+           justify-content: space-evenly;
+
+
+}
+    h1 {
+        text-align: center;
+        font-size: 4em;     
+        font-family: 'Spline Sans', sans-serif;      
+        color: aliceblue;
+        padding-top: 20px;
+    }
+       h4 {
+        color: aliceblue;         
+        font-size: 2em;    
+        padding-top: 50px; 
+        font-family: 'Ubuntu Mono', monospace;    
+        
+       } 
+    
+    .logo{
+        position: absolute;    
+        top: 10px; 
+        left: 10px;
+        width: 100px;
+        height:100px;
+        display: inline;
+        border: solid 5px rgb(2, 15, 32);  
+        border-radius:80%;        
+    }
+    .whatsapp { 
+        position: absolute;    
+        top: 20px; 
+        right: 20px;
+        width: 60px;
+        height:60px;
+        display: inline;
+        border: solid 5px black;  
+        border-radius:90%;
+        position: fixed;
+        }
+    
+    
+    
+    .links{
+        text-align: center ;               
+    }
+ ul{
+    display: flex;
+    flex-direction: row;   
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+ }
+    ul li {        
+        font-size: 1em;
+        list-style: none;
+        
+    }
+    ul li a{
+        text-decoration: none; 
+    }
+
+    main{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+    }
+    .tv, .pc, .tablet, .otras-reparaciones{
+        width: 20em;
+        height: 20em;
+    }
+    .p{
+        
+        width: 15em;
+        background-color: cornflowerblue;
+    }
+
+    .Contacto{
+        
+        font-size: 4em;
+        padding: 5px;   
+        text-decoration: none;    
+        color: rgb(2, 80, 80);
+        border: solid 1px gray;    
+    }
+
+    .parrafo{
+        font-size: 2em;
+        color: darkcyan;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .reparacion, .instalacion,.mantenimiento{
+        width: 15em;
+        height: 15em;
+    }
+    .p1, .p2, .p3{
+        font-size: 2em;
+        color: darkcyan;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    footer p{
+        color: white;
+    }
+
+
+    /*============direccion==========*/
+
+    .colectivos, .subte{
+        padding-top: 20px;
+        width: 15em;
+        height: 15em;
+    }
+
+    .ubicacion{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;  background-color: rgb(108, 108, 230);
+        font-size: 2.3em;
+        width: 100%;
+        height: 5em;
+        color: cornsilk;
+        margin-bottom: 8em;
+    
+    }
+    .datos{
+        
+        height: 30%;
+        width: 100%;
+        background-color: rgb(165, 43, 22);
+    }
+.dat{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+     padding: 10px;
+    height: 20em;
+}
+    
+    
+    
+   
