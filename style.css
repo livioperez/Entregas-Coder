@@ -90,6 +90,7 @@ header .encabezado{
         font-family: 'Spline Sans', sans-serif;      
         color: aliceblue;
         padding-top: 20px;
+        text-shadow: 10px 10px 5px gray;
     }
        h4 {
         color: aliceblue;         
