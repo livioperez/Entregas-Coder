@@ -29,7 +29,8 @@ body{
 }
 .main{
     grid-area: main;
-    background-color: #fff;
+    /*background-color: #fff;*/
+    background-image: radial-gradient( rgb(206, 223, 236), rgb(180, 228, 213));
 }
 .sidebar{
     grid-area: sidebar;
@@ -121,7 +122,11 @@ header .encabezado{
         height:100px;
         display: inline;
         border: solid 5px rgb(2, 15, 32);  
-        border-radius:80%;        
+        border-radius:80%;  
+        transition: top 2s;      
+    }
+    .logo:hover{
+        top:50px ;
     }
     .whatsapp { 
         position: absolute;    
@@ -168,11 +173,16 @@ header .encabezado{
         transform: translate(5em, 10px);
     }
     .p{
-        
+        font-size: 1em;
         width: 15em;
         background-color: cornflowerblue;
         transform: translate(2em, 5px);
+        transition: font-size 2s;
     }
+    .p:hover{
+        font-size: 1.2em;
+    }
+    
 
     .Contacto{
         
