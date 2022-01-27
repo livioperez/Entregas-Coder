@@ -20,7 +20,8 @@ body{
 }
 .header{
  grid-area: header;
- background-color: rgb(168, 189, 206);   
+ /*background-color: rgb(168, 189, 206);*/ 
+ background-image: linear-gradient(to top, rgb(168, 189, 206), rgb(158, 216, 199));  
 }
 .navbar{
     grid-area: navbar;
@@ -90,6 +91,7 @@ header .encabezado{
         font-family: 'Spline Sans', sans-serif;      
         color: aliceblue;
         padding-top: 20px;
+        padding-left: 15px;
         text-shadow: 10px 10px 5px gray;
     }
        h4 {
@@ -97,8 +99,19 @@ header .encabezado{
         font-size: 2em;    
         padding-top: 50px; 
         font-family: 'Ubuntu Mono', monospace;    
-        
+        animation-duration: 4s;
+        animation-name: aparecer;
+        animation-iteration-count: infinite;
        } 
+       @keyframes aparecer {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+     }
+     
     
     .logo{
         position: absolute;    
@@ -152,20 +165,26 @@ header .encabezado{
     .tv, .pc, .tablet, .otras-reparaciones{
         width: 20em;
         height: 20em;
+        transform: translate(5em, 10px);
     }
     .p{
         
         width: 15em;
         background-color: cornflowerblue;
+        transform: translate(2em, 5px);
     }
 
     .Contacto{
         
-        font-size: 4em;
+        font-size: 2em;
         padding: 5px;   
         text-decoration: none;    
         color: rgb(2, 80, 80);
-        border: solid 1px gray;    
+        border: solid 1px gray;  
+        transition: font-size 2s;  
+    }
+    .Contacto:hover{
+        font-size: 3em;
     }
 
     .parrafo{
